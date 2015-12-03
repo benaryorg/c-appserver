@@ -1,0 +1,11 @@
+FILE(GLOB Files *.c)
+add_executable(cappserver ${Files})
+
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -ldl") 
+
+INSTALL(TARGETS cappserver
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+)
+
